@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Track — Amitesh Patnaik</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout">
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="/" class="logo">
+          <span class="logo-name">Amitesh Patnaik</span>
+          <span class="logo-sub">Senior Web3 Developer</span>
+        </a>
+        <nav class="header-nav">
+          <a href="/" class="nav-link">Blog</a>
+          <a href="tracks.html" class="nav-link active">Tracks</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="post-back">
+        <a href="site/tracks.html" class="back-link">← All Tracks</a>
+      </div>
+
+      <div id="track-header" class="page-header"></div>
+      <div id="track-posts" class="track-posts"></div>
+    </main>
+
+    <footer class="site-footer">
+      <p>Built with plain HTML, CSS, and a bit of JS. No framework required.</p>
+    </footer>
+
+  </div>
+
+  <script src="posts.js"></script>
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+      const track = TRACKS.find(t => t.id === id);
+
+      if (!track) {
+        document.getElementById('track-header').innerHTML = '<p>Track not found.</p>';
+        return;
+      }
+
+      document.title = `${track.title} — Amitesh Patnaik`;
+
+      document.getElementById('track-header').innerHTML = `
+        <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;">
+          <span class="track-number">${track.number}</span>
+          <span class="track-level" style="font-size:0.8rem;color:var(--text-faint)">${track.level}</span>
+        </div>
+        <h1 class="page-title">${track.title}</h1>
+        <p class="page-desc">${track.desc}</p>
+      `;
+
+      const container = document.getElementById('track-posts');
+      track.posts.forEach((post, i) => {
+        const a = document.createElement('a');
+        a.className = 'track-post-item';
+        a.href = `post.html?type=track&trackId=${track.id}&index=${i}`;
+        a.innerHTML = `
+          <span class="track-post-num">${String(i + 1).padStart(2, '0')}</span>
+          <span class="track-post-title">${post.title}</span>
+        `;
+        container.appendChild(a);
+      });
+    })();
+  </script>
+</body>
+</html>

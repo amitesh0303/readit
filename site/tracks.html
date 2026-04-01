@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tracks — Amitesh Patnaik</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout">
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="/" class="logo">
+          <span class="logo-name">Amitesh Patnaik</span>
+          <span class="logo-sub">Senior Web3 Developer</span>
+        </a>
+        <nav class="header-nav">
+          <a href="/" class="nav-link">Blog</a>
+          <a href="tracks.html" class="nav-link active">Tracks</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="page-header">
+        <h1 class="page-title">Learning Tracks</h1>
+        <p class="page-desc">Structured deep-dives across the Web3 stack — from fundamentals to expert-level topics. Each track is a series of technical articles that build on each other.</p>
+      </div>
+
+      <div class="tracks-grid" id="tracks-grid">
+        <!-- Populated by JS -->
+        <div class="loading">Loading tracks…</div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>Built with plain HTML, CSS, and a bit of JS. No framework required.</p>
+    </footer>
+
+  </div>
+
+  <script src="posts.js"></script>
+  <script src="tracks-app.js"></script>
+</body>
+</html>

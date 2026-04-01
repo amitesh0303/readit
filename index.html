@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amitesh Patnaik — Web3 Dev Blog</title>
+  <link rel="stylesheet" href="site/style.css" />
+</head>
+<body>
+  <div class="layout">
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <span class="logo-name">Amitesh Patnaik</span>
+          <span class="logo-sub">Senior Web3 Developer</span>
+        </a>
+        <nav class="header-nav">
+          <a href="index.html" class="nav-link active">Blog</a>
+          <a href="site/tracks.html" class="nav-link">Tracks</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="hero">
+        <p class="hero-text">
+          Building on Ethereum, Solana, and L2s since 2023. Writing about what I actually learn — the bugs, the tradeoffs, the things that took longer than they should have.
+        </p>
+        <div class="hero-tags">
+          <span class="tag">Solidity</span>
+          <span class="tag">Rust / Anchor</span>
+          <span class="tag">DeFi</span>
+          <span class="tag">ZK Proofs</span>
+          <span class="tag">L2s</span>
+        </div>
+      </div>
+
+      <section class="posts-section">
+        <div class="posts-list" id="posts-list">
+          <!-- Populated by JS -->
+          <div class="loading">Loading posts…</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Built with plain HTML, CSS, and a bit of JS. No framework required.</p>
+    </footer>
+
+  </div>
+
+  <script src="site/posts.js"></script>
+  <script src="site/app.js"></script>
+</body>
+</html>

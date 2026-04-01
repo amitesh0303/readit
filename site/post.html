@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post — Amitesh Patnaik</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- marked.js for markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@9.1.6/marked.min.js"></script>
+  <!-- highlight.js — full bundle covers Solidity, Rust, TypeScript, Python, Bash, etc. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github-dark.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/highlight.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/languages/rust.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/languages/typescript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/languages/solidity.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/languages/bash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/languages/yaml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/languages/python.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/languages/dockerfile.min.js"></script>
+</head>
+<body>
+  <div class="layout">
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="/" class="logo">
+          <span class="logo-name">Amitesh Patnaik</span>
+          <span class="logo-sub">Senior Web3 Developer</span>
+        </a>
+        <nav class="header-nav">
+          <a href="/" class="nav-link">Blog</a>
+          <a href="tracks.html" class="nav-link">Tracks</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main post-main">
+      <div class="post-back" id="post-back">
+        <a href="javascript:history.back()" class="back-link">← Back</a>
+      </div>
+
+      <article class="post-article" id="post-content">
+        <div class="loading">Loading…</div>
+      </article>
+
+      <nav class="post-nav" id="post-nav"></nav>
+    </main>
+
+    <footer class="site-footer">
+      <p>Built with plain HTML, CSS, and a bit of JS. No framework required.</p>
+    </footer>
+
+  </div>
+
+  <script src="posts.js"></script>
+  <script src="post-app.js"></script>
+</body>
+</html>
