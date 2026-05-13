@@ -1,0 +1,10 @@
+{
+  "id": "track-6",
+  "category": "foundations",
+  "title": "Zero-Knowledge Proofs",
+  "slug": "zero-knowledge-proofs",
+  "level": "Intermediate → Expert",
+  "description": "SNARKs, STARKs, Circom circuits, trusted setups, on-chain verification, and building a privacy mixer.",
+  "lessons": 8,
+  "lastVerified": "2025-01-15"
+}

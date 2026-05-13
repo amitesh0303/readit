@@ -1,0 +1,10 @@
+{
+  "id": "track-10",
+  "category": "tooling-infra",
+  "title": "Infrastructure & DevOps for Web3",
+  "slug": "infrastructure-devops",
+  "level": "Intermediate",
+  "description": "RPC providers, Tenderly, GraphQL APIs, The Graph, and deploying Node.js indexers on AWS.",
+  "lessons": 5,
+  "lastVerified": "2025-01-15"
+}

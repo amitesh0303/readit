@@ -1,0 +1,10 @@
+{
+  "id": "l1-bnb-chain",
+  "category": "l1-ecosystems",
+  "title": "BNB Chain Development",
+  "slug": "bnb-chain",
+  "level": "Beginner → Intermediate",
+  "description": "Build on BNB Chain — BEP-20 tokens, smart contracts, and BSC deployment.",
+  "lessons": 5,
+  "lastVerified": "2025-01-15"
+}

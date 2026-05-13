@@ -1,0 +1,10 @@
+{
+  "id": "l2-blast",
+  "category": "ethereum-l2s",
+  "title": "Blast Development",
+  "slug": "blast",
+  "level": "Intermediate",
+  "description": "Build on Blast — optimistic rollup with native yield, auto-rebasing ETH/USDB, gas revenue sharing, and deployment.",
+  "lessons": 5,
+  "lastVerified": "2025-01-15"
+}

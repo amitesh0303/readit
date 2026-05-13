@@ -1,0 +1,10 @@
+{
+  "id": "l2-linea",
+  "category": "ethereum-l2s",
+  "title": "Linea Development",
+  "slug": "linea",
+  "level": "Intermediate → Advanced",
+  "description": "Build on Linea — zk-rollup architecture, EVM equivalence, bridging, and deployment with gas comparisons.",
+  "lessons": 5,
+  "lastVerified": "2025-01-15"
+}

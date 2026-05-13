@@ -1,0 +1,10 @@
+{
+  "id": "appchain-frameworks",
+  "category": "appchain-frameworks",
+  "title": "Appchain Frameworks",
+  "slug": "appchain-frameworks",
+  "level": "Intermediate → Advanced",
+  "description": "Compare and deploy appchains — Cosmos SDK, OP Stack, Polygon CDK, Starknet, Saga, and Avalanche subnets from setup to running devnet.",
+  "lessons": 6,
+  "lastVerified": "2025-01-15"
+}

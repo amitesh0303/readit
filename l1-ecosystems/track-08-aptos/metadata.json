@@ -1,0 +1,10 @@
+{
+  "id": "l1-aptos",
+  "category": "l1-ecosystems",
+  "title": "Aptos Development",
+  "slug": "aptos",
+  "level": "Beginner → Intermediate",
+  "description": "Build on Aptos — Block-STM parallel execution, Move smart contracts, resource model, and frontend integration with the Aptos TypeScript SDK.",
+  "lessons": 7,
+  "lastVerified": "2025-01-15"
+}

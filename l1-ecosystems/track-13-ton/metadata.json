@@ -1,0 +1,10 @@
+{
+  "id": "l1-ton",
+  "category": "l1-ecosystems",
+  "title": "TON Development",
+  "slug": "ton",
+  "level": "Beginner → Intermediate",
+  "description": "Build on TON — actor-model smart contracts, FunC programming, Jetton token standards, and frontend integration with TON Connect.",
+  "lessons": 7,
+  "lastVerified": "2025-01-15"
+}

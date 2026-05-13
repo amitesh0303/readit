@@ -1,0 +1,10 @@
+{
+  "id": "bitcoin-l2s",
+  "category": "bitcoin-l2s",
+  "title": "Bitcoin L2s and Sidechains",
+  "slug": "bitcoin-l2s",
+  "level": "Intermediate → Advanced",
+  "description": "Build on Bitcoin L2s — Lightning Network, Stacks/Clarity smart contracts, Liquid Network, Rootstock EVM, and Merlin Chain.",
+  "lessons": 8,
+  "lastVerified": "2025-01-15"
+}

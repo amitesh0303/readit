@@ -1,0 +1,10 @@
+{
+  "id": "track-1",
+  "category": "foundations",
+  "title": "Blockchain Fundamentals",
+  "slug": "blockchain-fundamentals",
+  "level": "Beginner",
+  "description": "Blocks, nodes, consensus, wallets, gas, and the EVM — the foundation everything else builds on.",
+  "lessons": 7,
+  "lastVerified": "2025-01-15"
+}

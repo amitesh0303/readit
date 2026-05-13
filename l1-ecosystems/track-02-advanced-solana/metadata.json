@@ -1,0 +1,10 @@
+{
+  "id": "track-5",
+  "category": "l1-ecosystems",
+  "title": "Advanced Solana",
+  "slug": "advanced-solana",
+  "level": "Expert",
+  "description": "Geyser streaming, custom indexers, vAMMs, funding rates, keeper bots, and Pyth oracles.",
+  "lessons": 7,
+  "lastVerified": "2025-01-15"
+}

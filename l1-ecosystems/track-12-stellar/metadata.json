@@ -1,0 +1,10 @@
+{
+  "id": "l1-stellar",
+  "category": "l1-ecosystems",
+  "title": "Stellar Development",
+  "slug": "stellar",
+  "level": "Beginner → Intermediate",
+  "description": "Build on Stellar — Soroban smart contracts, asset issuance, and Horizon API integration.",
+  "lessons": 5,
+  "lastVerified": "2025-01-15"
+}

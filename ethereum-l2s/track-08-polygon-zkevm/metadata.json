@@ -1,0 +1,10 @@
+{
+  "id": "l2-polygon-zkevm",
+  "category": "ethereum-l2s",
+  "title": "Polygon zkEVM Development",
+  "slug": "polygon-zkevm",
+  "level": "Intermediate",
+  "description": "Build on Polygon zkEVM — Type 2 zk-rollup architecture, EVM equivalence, bridging, and deployment with gas comparisons.",
+  "lessons": 5,
+  "lastVerified": "2025-01-15"
+}

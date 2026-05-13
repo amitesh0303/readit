@@ -1,0 +1,10 @@
+{
+  "id": "l1-tron",
+  "category": "l1-ecosystems",
+  "title": "Tron Development",
+  "slug": "tron",
+  "level": "Beginner → Intermediate",
+  "description": "Build on Tron — DPoS consensus, TronBox smart contracts, TRC-20 tokens, energy/bandwidth resource model, and TronWeb frontend integration.",
+  "lessons": 5,
+  "lastVerified": "2025-01-15"
+}

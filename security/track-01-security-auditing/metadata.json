@@ -1,0 +1,10 @@
+{
+  "id": "track-9",
+  "category": "security",
+  "title": "Security & Auditing",
+  "slug": "security-auditing",
+  "level": "Intermediate → Expert",
+  "description": "Audit process, Slither, Echidna, working with auditors, and the top 10 vulnerability classes.",
+  "lessons": 5,
+  "lastVerified": "2025-01-15"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "l1-near-protocol",
+  "category": "l1-ecosystems",
+  "title": "NEAR Protocol Development",
+  "slug": "near-protocol",
+  "level": "Beginner → Intermediate",
+  "description": "Build on NEAR — sharded architecture, Rust smart contracts, NEP token standards, and frontend integration with near-api-js.",
+  "lessons": 5,
+  "lastVerified": "2025-01-15"
+}

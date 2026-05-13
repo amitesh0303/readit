@@ -1,0 +1,10 @@
+{
+  "id": "l1-hedera",
+  "category": "l1-ecosystems",
+  "title": "Hedera Development",
+  "slug": "hedera",
+  "level": "Beginner → Intermediate",
+  "description": "Build on Hedera — Hashgraph consensus, Hedera Token Service, smart contracts, and SDK integration.",
+  "lessons": 5,
+  "lastVerified": "2025-01-15"
+}

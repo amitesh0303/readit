@@ -1,0 +1,10 @@
+{
+  "id": "l1-cardano",
+  "category": "l1-ecosystems",
+  "title": "Cardano Development",
+  "slug": "cardano",
+  "level": "Intermediate",
+  "description": "Build on Cardano — UTXO model, Plutus smart contracts, native tokens, and Preview testnet deployment with Haskell-based validators.",
+  "lessons": 7,
+  "lastVerified": "2025-01-15"
+}

@@ -1,26 +1,5 @@
 {
   "version": 1,
-  "rules": [
-    {
-      "include": "/site/*"
-    },
-    {
-      "include": "/blogs/*"
-    },
-    {
-      "include": "/track-*/*"
-    },
-    {
-      "include": "/*.html"
-    },
-    {
-      "include": "/*.css"
-    },
-    {
-      "include": "/*.js"
-    },
-    {
-      "include": "/_redirects"
-    }
-  ]
+  "include": ["/*"],
+  "exclude": []
 }

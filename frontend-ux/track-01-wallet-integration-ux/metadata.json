@@ -1,0 +1,10 @@
+{
+  "id": "track-7",
+  "category": "frontend-ux",
+  "title": "Wallet Integration & UX",
+  "slug": "wallet-integration-ux",
+  "level": "Intermediate",
+  "description": "MetaMask, WalletConnect, Phantom, multi-chain UX, meta-transactions, and onboarding non-crypto users.",
+  "lessons": 6,
+  "lastVerified": "2025-01-15"
+}

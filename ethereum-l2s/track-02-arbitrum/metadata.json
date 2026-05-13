@@ -1,0 +1,10 @@
+{
+  "id": "l2-arbitrum",
+  "category": "ethereum-l2s",
+  "title": "Arbitrum Development",
+  "slug": "arbitrum",
+  "level": "Intermediate",
+  "description": "Build on Arbitrum — optimistic rollup architecture, bridging, Arbitrum SDK, and deployment with gas savings.",
+  "lessons": 5,
+  "lastVerified": "2025-01-15"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "l2-zksync",
+  "category": "ethereum-l2s",
+  "title": "zkSync Era Development",
+  "slug": "zksync",
+  "level": "Intermediate → Advanced",
+  "description": "Build on zkSync Era — zk-rollup architecture, Solidity deployment differences, bridging, and tooling with gas comparisons.",
+  "lessons": 5,
+  "lastVerified": "2025-01-15"
+}

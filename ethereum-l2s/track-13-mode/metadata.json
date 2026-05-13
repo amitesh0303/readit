@@ -1,0 +1,10 @@
+{
+  "id": "l2-mode",
+  "category": "ethereum-l2s",
+  "title": "Mode Network Development",
+  "slug": "mode",
+  "level": "Intermediate",
+  "description": "Build on Mode — OP Stack optimistic rollup with DeFi-native sequencer fee sharing, bridging, and deployment.",
+  "lessons": 5,
+  "lastVerified": "2025-01-15"
+}

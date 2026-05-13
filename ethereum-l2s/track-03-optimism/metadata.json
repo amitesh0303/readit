@@ -1,0 +1,10 @@
+{
+  "id": "l2-optimism",
+  "category": "ethereum-l2s",
+  "title": "Optimism & OP Stack Development",
+  "slug": "optimism",
+  "level": "Intermediate",
+  "description": "Build on Optimism — OP Stack architecture, bridging, ecosystem tooling, and deployment with gas comparison.",
+  "lessons": 5,
+  "lastVerified": "2025-01-15"
+}

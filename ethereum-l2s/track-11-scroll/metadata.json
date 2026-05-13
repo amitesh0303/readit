@@ -1,0 +1,10 @@
+{
+  "id": "l2-scroll",
+  "category": "ethereum-l2s",
+  "title": "Scroll Development",
+  "slug": "scroll",
+  "level": "Intermediate → Advanced",
+  "description": "Build on Scroll — zkEVM architecture, bytecode-level EVM equivalence, bridging, and deployment with gas comparisons.",
+  "lessons": 5,
+  "lastVerified": "2025-01-15"
+}

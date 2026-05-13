@@ -1,0 +1,10 @@
+{
+  "id": "l1-sui",
+  "category": "l1-ecosystems",
+  "title": "Sui Development",
+  "slug": "sui",
+  "level": "Beginner → Intermediate",
+  "description": "Build on Sui — object-centric model, Sui Move smart contracts, and testnet deployment with parallel execution.",
+  "lessons": 7,
+  "lastVerified": "2025-01-15"
+}

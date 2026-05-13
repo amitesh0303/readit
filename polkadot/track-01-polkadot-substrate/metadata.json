@@ -1,0 +1,10 @@
+{
+  "id": "polkadot-substrate",
+  "category": "polkadot",
+  "title": "Polkadot & Substrate Development",
+  "slug": "polkadot-substrate",
+  "level": "Intermediate → Advanced",
+  "description": "Build parachains with Substrate — pallets, FRAME macros, runtime configuration, XCM messaging, and Polkadot 2.0 coretime.",
+  "lessons": 6,
+  "lastVerified": "2025-01-15"
+}

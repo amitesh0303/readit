@@ -8,7 +8,14 @@
 
   grid.innerHTML = '';
 
-  TRACKS.forEach(track => {
+  TRACKS
+    .filter(t => t.id && t.number && t.title && t.level && t.desc && t.posts)
+    .sort((a, b) => {
+      const numA = parseInt(a.number.replace('Track ', ''), 10);
+      const numB = parseInt(b.number.replace('Track ', ''), 10);
+      return numA - numB;
+    })
+    .forEach(track => {
     const card = document.createElement('div');
     card.className = 'track-card';
     card.setAttribute('role', 'button');
@@ -25,11 +32,11 @@
     `;
 
     card.addEventListener('click', () => {
-      window.location.href = `site/track.html?id=${track.id}`;
+      window.location.href = `track.html?id=${track.id}`;
     });
     card.addEventListener('keydown', e => {
       if (e.key === 'Enter' || e.key === ' ') {
-        window.location.href = `site/track.html?id=${track.id}`;
+        window.location.href = `track.html?id=${track.id}`;
       }
     });
 

@@ -1,0 +1,10 @@
+{
+  "id": "cosmos-ibc",
+  "category": "cosmos-ibc",
+  "title": "Cosmos SDK & IBC Development",
+  "slug": "cosmos-ibc",
+  "level": "Intermediate → Advanced",
+  "description": "Build sovereign appchains with Cosmos SDK and connect them via IBC — modules, token transfers, custom packets, and interchain security.",
+  "lessons": 7,
+  "lastVerified": "2025-01-15"
+}

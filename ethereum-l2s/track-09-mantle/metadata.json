@@ -1,0 +1,10 @@
+{
+  "id": "l2-mantle",
+  "category": "ethereum-l2s",
+  "title": "Mantle Network Development",
+  "slug": "mantle",
+  "level": "Intermediate",
+  "description": "Build on Mantle — optimistic rollup with modular data availability, bridging, Mantle SDK, and deployment with gas savings.",
+  "lessons": 5,
+  "lastVerified": "2025-01-15"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "track-2",
+  "category": "defi",
+  "title": "Solidity & EVM Smart Contracts",
+  "slug": "solidity-evm",
+  "level": "Beginner → Intermediate",
+  "description": "From your first contract to production-grade Solidity — tokens, NFTs, security, gas optimization, and testing.",
+  "lessons": 10,
+  "lastVerified": "2025-01-15"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "l1-sei",
+  "category": "l1-ecosystems",
+  "title": "Sei Development",
+  "slug": "sei",
+  "level": "Beginner → Intermediate",
+  "description": "Build on Sei — parallelized EVM and CosmWasm dual execution, optimistic parallelization, token standards, and frontend integration with Sei's high-throughput architecture.",
+  "lessons": 5,
+  "lastVerified": "2025-07-14"
+}

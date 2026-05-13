@@ -1,0 +1,10 @@
+{
+  "id": "l2-immutable",
+  "category": "ethereum-l2s",
+  "title": "Immutable zkEVM Development",
+  "slug": "immutable",
+  "level": "Intermediate",
+  "description": "Build on Immutable zkEVM — gaming-focused zk-rollup architecture, Immutable SDK, NFT minting, and deployment for web3 games.",
+  "lessons": 5,
+  "lastVerified": "2025-01-15"
+}

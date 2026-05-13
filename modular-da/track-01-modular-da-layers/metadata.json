@@ -1,0 +1,10 @@
+{
+  "id": "modular-da-layers",
+  "category": "modular-da",
+  "title": "Modular Blockchain & Data Availability Layers",
+  "slug": "modular-da-layers",
+  "level": "Intermediate → Advanced",
+  "description": "Understand modular blockchain architecture and integrate Celestia, EigenDA, and Avail for data availability.",
+  "lessons": 5,
+  "lastVerified": "2025-01-15"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "l2-starknet",
+  "category": "ethereum-l2s",
+  "title": "Starknet Development",
+  "slug": "starknet",
+  "level": "Intermediate → Advanced",
+  "description": "Build on Starknet — validity rollup architecture, Cairo smart contracts, bridging, and ecosystem tooling with gas comparisons.",
+  "lessons": 7,
+  "lastVerified": "2025-01-15"
+}

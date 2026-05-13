@@ -1,0 +1,10 @@
+{
+  "id": "l2-base",
+  "category": "ethereum-l2s",
+  "title": "Base Development",
+  "slug": "base",
+  "level": "Beginner → Intermediate",
+  "description": "Build on Base — Coinbase's OP Stack L2 with low fees, high throughput, and seamless onchain tooling.",
+  "lessons": 5,
+  "lastVerified": "2025-01-15"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "l1-xrp-ledger",
+  "category": "l1-ecosystems",
+  "title": "XRP Ledger Development",
+  "slug": "xrp-ledger",
+  "level": "Beginner → Intermediate",
+  "description": "Build on XRP Ledger — federated consensus, payment channels, DEX, trust lines, and token issuance with xrpl.js.",
+  "lessons": 5,
+  "lastVerified": "2025-01-15"
+}

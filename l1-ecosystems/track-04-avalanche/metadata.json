@@ -1,0 +1,10 @@
+{
+  "id": "l1-avalanche",
+  "category": "l1-ecosystems",
+  "title": "Avalanche Development",
+  "slug": "avalanche",
+  "level": "Beginner → Intermediate",
+  "description": "Build on Avalanche — C-Chain smart contracts, Subnet architecture, Fuji testnet deployment, and cross-chain dApps.",
+  "lessons": 5,
+  "lastVerified": "2025-01-15"
+}

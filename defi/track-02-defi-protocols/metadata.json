@@ -1,0 +1,10 @@
+{
+  "id": "track-3",
+  "category": "defi",
+  "title": "DeFi Protocols",
+  "slug": "defi-protocols",
+  "level": "Intermediate",
+  "description": "AMMs, lending, oracles, flash loans, and staking — how DeFi actually works under the hood.",
+  "lessons": 8,
+  "lastVerified": "2025-01-15"
+}

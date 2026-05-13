@@ -1,0 +1,10 @@
+{
+  "id": "track-8",
+  "category": "ethereum-l2s",
+  "title": "L2s, Rollups & Cross-Chain",
+  "slug": "l2s-rollups-crosschain",
+  "level": "Intermediate → Expert",
+  "description": "Optimistic vs ZK rollups, Arbitrum, Polygon, deploying to L2s, bridges, and modular blockchain stacks.",
+  "lessons": 6,
+  "lastVerified": "2025-01-15"
+}

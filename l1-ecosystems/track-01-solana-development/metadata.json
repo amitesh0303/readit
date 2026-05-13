@@ -1,0 +1,10 @@
+{
+  "id": "track-4",
+  "category": "l1-ecosystems",
+  "title": "Solana Development",
+  "slug": "solana-development",
+  "level": "Beginner → Intermediate",
+  "description": "The account model, PDAs, Anchor, CPIs, and SPL tokens — everything you need to build on Solana.",
+  "lessons": 8,
+  "lastVerified": "2025-01-15"
+}
