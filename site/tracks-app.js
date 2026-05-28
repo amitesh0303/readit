@@ -3,8 +3,8 @@
   const grid = document.getElementById('tracks-grid');
   if (!grid) return;
 
-  // Add wide-layout class to main
-  document.querySelector('.main').style.maxWidth = '1100px';
+  // Add wide-layout class to body for tracks page
+  document.body.classList.add('tracks-page');
 
   grid.innerHTML = '';
 

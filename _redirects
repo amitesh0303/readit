@@ -9,6 +9,3 @@
 /track-8-l2s-rollups-crosschain/* /ethereum-l2s/track-01-l2s-rollups-crosschain/:splat 301
 /track-9-security-auditing/* /security/track-01-security-auditing/:splat 301
 /track-10-infrastructure-devops/* /tooling-infra/track-01-infrastructure-devops/:splat 301
-
-# Root redirect
-/ /site/ 301

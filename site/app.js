@@ -8,7 +8,7 @@
   BLOG_POSTS.forEach(post => {
     const a = document.createElement('a');
     a.className = 'post-item';
-    a.href = `site/post.html?type=blog&slug=${post.slug}`;
+    a.href = `post.html?type=blog&slug=${post.slug}`;
 
     const tagsHtml = post.tags.slice(0, 4).map(t =>
       `<span class="post-tag">${t}</span>`

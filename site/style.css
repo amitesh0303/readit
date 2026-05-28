@@ -24,6 +24,24 @@
   --max-w-wide:  1100px;
 }
 
+/* ── Reading Progress Bar ─────────────────────────────────────────────────── */
+.reading-progress-track {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  z-index: 200;
+}
+.reading-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+  transition: width 0.1s linear;
+  border-radius: 0 2px 2px 0;
+}
+
 html { font-size: 16px; scroll-behavior: smooth; }
 
 body {
@@ -228,9 +246,6 @@ a:hover { color: var(--text); }
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
-  max-width: var(--max-w-wide);
-  margin: 0 auto;
-  padding: 0 1.5rem 4rem;
 }
 
 /* override main max-width for tracks page */
@@ -605,3 +620,154 @@ a:hover { color: var(--text); }
 
 /* ── Selection ────────────────────────────────────────────────────────────── */
 ::selection { background: var(--accent-dim); color: var(--text); }
+
+
+/* ── Breadcrumb ───────────────────────────────────────────────────────────── */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.breadcrumb-link {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  transition: color 0.15s;
+}
+.breadcrumb-link:hover { color: var(--text); }
+.breadcrumb-sep {
+  color: var(--text-faint);
+  font-size: 0.875rem;
+}
+.breadcrumb-current {
+  font-size: 0.875rem;
+  color: var(--text-faint);
+}
+
+/* ── Read time in post header ─────────────────────────────────────────────── */
+.post-header-readtime {
+  font-size: 0.82rem;
+  color: var(--text-faint);
+}
+
+/* ── Code block with header bar ──────────────────────────────────────────── */
+.code-block {
+  margin: 1.5rem 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.code-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background: #161b27;
+  border-bottom: 1px solid var(--border);
+  min-height: 36px;
+}
+.code-lang {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.code-block pre {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #0d1117;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  border: none;
+  border-radius: 0;
+}
+.code-block pre code {
+  background: none;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* ── Copy button ──────────────────────────────────────────────────────────── */
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.6rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-faint);
+  font-size: 0.72rem;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+.copy-btn:hover {
+  color: var(--text-muted);
+  border-color: var(--text-faint);
+  background: var(--bg-hover);
+}
+.copy-btn.copied {
+  color: var(--green);
+  border-color: var(--green);
+}
+
+/* ── Heading anchor links ─────────────────────────────────────────────────── */
+.heading-anchor-wrapper {
+  position: relative;
+}
+.heading-anchor {
+  opacity: 0;
+  margin-left: 0.5rem;
+  font-size: 0.75em;
+  color: var(--text-faint);
+  text-decoration: none;
+  transition: opacity 0.15s, color 0.15s;
+  font-weight: 400;
+}
+.heading-anchor-wrapper:hover .heading-anchor { opacity: 1; }
+.heading-anchor:hover { color: var(--accent-soft); opacity: 1; }
+
+/* ── Scroll to top button ─────────────────────────────────────────────────── */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.2s, transform 0.2s, border-color 0.15s, color 0.15s;
+  pointer-events: none;
+  z-index: 50;
+}
+.scroll-top-btn.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.scroll-top-btn:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+/* ── Responsive (additions) ───────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .scroll-top-btn { bottom: 1.25rem; right: 1.25rem; }
+  .code-block pre { padding: 1rem; font-size: 0.82rem; }
+  .post-header-meta { gap: 0.5rem; }
+}

@@ -1,14 +1,14 @@
 // Post reader — handles both blog posts (frontmatter) and track articles (# H1 header)
 (function () {
-  const params   = new URLSearchParams(window.location.search);
-  const type     = params.get('type');       // 'blog' | 'track'
+  const params    = new URLSearchParams(window.location.search);
+  const type      = params.get('type');       // 'blog' | 'track'
   const container = document.getElementById('post-content');
-  const navEl    = document.getElementById('post-nav');
-  const backEl   = document.getElementById('post-back');
+  const navEl     = document.getElementById('post-nav');
+  const backEl    = document.getElementById('post-back');
 
-  let filePath = null;
-  let prevPost = null;
-  let nextPost = null;
+  let filePath     = null;
+  let prevPost     = null;
+  let nextPost     = null;
   let trackContext = null; // { track, index } for breadcrumb
 
   // ── 1. Resolve which file to load ──────────────────────────────────────
@@ -22,10 +22,10 @@
 
     if (idx > 0)
       prevPost = { label: '← Newer', title: BLOG_POSTS[idx - 1].title,
-                   href: `site/post.html?type=blog&slug=${BLOG_POSTS[idx - 1].slug}` };
+                   href: `post.html?type=blog&slug=${BLOG_POSTS[idx - 1].slug}` };
     if (idx < BLOG_POSTS.length - 1)
       nextPost = { label: 'Older →', title: BLOG_POSTS[idx + 1].title,
-                   href: `site/post.html?type=blog&slug=${BLOG_POSTS[idx + 1].slug}` };
+                   href: `post.html?type=blog&slug=${BLOG_POSTS[idx + 1].slug}` };
 
   } else if (type === 'track') {
     const trackId = params.get('trackId');
@@ -41,10 +41,10 @@
 
     if (index > 0)
       prevPost = { label: '← Previous', title: track.posts[index - 1].title,
-                   href: `site/post.html?type=track&trackId=${trackId}&index=${index - 1}` };
+                   href: `post.html?type=track&trackId=${trackId}&index=${index - 1}` };
     if (index < track.posts.length - 1)
       nextPost = { label: 'Next →', title: track.posts[index + 1].title,
-                   href: `site/post.html?type=track&trackId=${trackId}&index=${index + 1}` };
+                   href: `post.html?type=track&trackId=${trackId}&index=${index + 1}` };
 
   } else {
     container.innerHTML = '<p>Unknown post type.</p>';
@@ -57,9 +57,9 @@
     const { track, index } = trackContext;
     backEl.innerHTML = `
       <div class="breadcrumb">
-        <a href="site/tracks.html" class="breadcrumb-link">Tracks</a>
+        <a href="tracks.html" class="breadcrumb-link">Tracks</a>
         <span class="breadcrumb-sep">›</span>
-        <a href="site/track.html?id=${track.id}" class="breadcrumb-link">${track.title}</a>
+        <a href="track.html?id=${track.id}" class="breadcrumb-link">${track.title}</a>
         <span class="breadcrumb-sep">›</span>
         <span class="breadcrumb-current">${String(index + 1).padStart(2, '0')} of ${track.posts.length}</span>
       </div>
@@ -79,6 +79,8 @@
       const parsed = parseMarkdown(raw);
       renderPost(parsed);
       renderNav(prevPost, nextPost);
+      initReadingProgress();
+      initScrollToTop();
     })
     .catch(err => {
       container.innerHTML = `
@@ -141,17 +143,25 @@
     return { source: 'h1', title, track, readTime, body };
   }
 
-  // ── 5. Render the post ─────────────────────────────────────────────────
+  // ── 5. Estimate reading time from raw text ─────────────────────────────
+
+  function estimateReadTime(text) {
+    const words = text.trim().split(/\s+/).length;
+    const mins  = Math.max(1, Math.round(words / 200));
+    return `${mins} min read`;
+  }
+
+  // ── 6. Render the post ─────────────────────────────────────────────────
 
   function renderPost(parsed) {
     // Configure marked
     const renderer = new marked.Renderer();
 
+    // Code blocks — syntax highlight + copy button
     renderer.code = function (token) {
-      // marked v9 passes an object {text, lang, escaped}
       const rawCode = typeof token === 'object' ? token.text : token;
       const rawLang = typeof token === 'object' ? (token.lang || '') : '';
-      const lang    = rawLang.split(/\s/)[0]; // strip any extra flags
+      const lang    = rawLang.split(/\s/)[0];
 
       let highlighted;
       try {
@@ -165,7 +175,38 @@
       }
 
       const langLabel = lang ? `<span class="code-lang">${lang}</span>` : '';
-      return `<div class="code-block">${langLabel}<pre><code class="hljs">${highlighted}</code></pre></div>`;
+      // Encode the raw code safely as a data attribute
+      const encoded = encodeURIComponent(rawCode);
+      return `
+        <div class="code-block">
+          <div class="code-block-header">
+            ${langLabel}
+            <button class="copy-btn" data-code="${encoded}" aria-label="Copy code">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              Copy
+            </button>
+          </div>
+          <pre><code class="hljs">${highlighted}</code></pre>
+        </div>`;
+    };
+
+    // Headings — add anchor links
+    renderer.heading = function (token) {
+      const text  = typeof token === 'object' ? token.text : token;
+      const level = typeof token === 'object' ? token.depth : 2;
+      const id    = text.toLowerCase()
+        .replace(/[^\w\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .trim();
+      return `
+        <h${level} id="${id}" class="heading-anchor-wrapper">
+          ${text}
+          <a href="#${id}" class="heading-anchor" aria-label="Link to section">#</a>
+        </h${level}>`;
     };
 
     marked.use({ renderer, gfm: true, breaks: false });
@@ -183,10 +224,12 @@
         try { dateDisplay = new Date(date + 'T00:00:00').toLocaleDateString('en-US',
           { year: 'numeric', month: 'long', day: 'numeric' }); } catch {}
       }
+      const readTime = estimateReadTime(body);
       const tagsHtml = tags.map(t => `<span class="post-header-tag">${t}</span>`).join('');
       metaHtml = `
         <div class="post-header-meta">
           ${date ? `<span class="post-header-date">${dateDisplay}</span>` : ''}
+          <span class="post-header-readtime">· ${readTime}</span>
           ${tags.length ? `<div class="post-header-tags">${tagsHtml}</div>` : ''}
         </div>`;
     } else {
@@ -194,10 +237,10 @@
       body  = parsed.body;
       const badges = [];
       if (parsed.track)    badges.push(`<span class="post-header-tag">${parsed.track}</span>`);
-      if (parsed.readTime) badges.push(`<span class="post-header-date">${parsed.readTime} read</span>`);
-      if (badges.length) {
-        metaHtml = `<div class="post-header-meta">${badges.join('')}</div>`;
-      }
+      // Prefer explicit read time from markdown metadata, fall back to estimate
+      const rt = parsed.readTime || estimateReadTime(body);
+      badges.push(`<span class="post-header-date">${rt} read</span>`);
+      metaHtml = `<div class="post-header-meta">${badges.join('')}</div>`;
     }
 
     if (title) document.title = `${title} — Amitesh Patnaik`;
@@ -213,10 +256,44 @@
       <div class="post-body">${marked.parse(body)}</div>
     `;
 
+    // Wire up copy buttons
+    container.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = decodeURIComponent(btn.dataset.code);
+        navigator.clipboard.writeText(code).then(() => {
+          btn.classList.add('copied');
+          btn.innerHTML = `
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Copied!`;
+          setTimeout(() => {
+            btn.classList.remove('copied');
+            btn.innerHTML = `
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              Copy`;
+          }, 2000);
+        }).catch(() => {
+          // Fallback for older browsers
+          const ta = document.createElement('textarea');
+          ta.value = code;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        });
+      });
+    });
+
     window.scrollTo(0, 0);
   }
 
-  // ── 6. Prev / next navigation ──────────────────────────────────────────
+  // ── 7. Prev / next navigation ──────────────────────────────────────────
 
   function renderNav(prev, next) {
     if (!prev && !next) { navEl.style.display = 'none'; return; }
@@ -232,6 +309,38 @@
         <span class="post-nav-title">${escapeHtml(next.title)}</span>
       </a>`;
     navEl.innerHTML = html;
+  }
+
+  // ── 8. Reading progress bar ────────────────────────────────────────────
+
+  function initReadingProgress() {
+    const bar = document.getElementById('reading-progress');
+    if (!bar) return;
+
+    function update() {
+      const scrollTop    = window.scrollY;
+      const docHeight    = document.documentElement.scrollHeight - window.innerHeight;
+      const pct          = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
+      bar.style.width    = pct + '%';
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  }
+
+  // ── 9. Scroll-to-top button ────────────────────────────────────────────
+
+  function initScrollToTop() {
+    const btn = document.getElementById('scroll-top-btn');
+    if (!btn) return;
+
+    window.addEventListener('scroll', () => {
+      btn.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }
 
   // ── Helpers ────────────────────────────────────────────────────────────
