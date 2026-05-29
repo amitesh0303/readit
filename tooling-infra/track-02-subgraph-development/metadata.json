@@ -1,0 +1,10 @@
+{
+  "id": "subgraph-development",
+  "category": "tooling-infra",
+  "title": "The Graph & Subgraph Development",
+  "slug": "subgraph-development",
+  "level": "Intermediate",
+  "description": "Manifest, schema, mappings, dynamic data sources, performance, decentralized network — building production indexers with The Graph.",
+  "lessons": 7,
+  "lastVerified": "2026-05-15"
+}

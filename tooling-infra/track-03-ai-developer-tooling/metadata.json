@@ -1,0 +1,10 @@
+{
+  "id": "ai-developer-tooling",
+  "category": "tooling-infra",
+  "title": "AI Developer Tooling: MCP, Skills & Subagents",
+  "slug": "ai-developer-tooling",
+  "level": "Intermediate",
+  "description": "MCP servers, Claude Skills, custom subagents, and the agent toolchain — practical AI tooling for Web3 engineers in 2026.",
+  "lessons": 7,
+  "lastVerified": "2026-05-29"
+}

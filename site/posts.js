@@ -1,6 +1,24 @@
 // All blog posts — ordered newest first
 const BLOG_POSTS = [
   {
+    slug: "2026-03-12-how-mcps-actually-changed-my-week",
+    title: "How MCPs Actually Changed My Week (Not the Marketing Version)",
+    date: "2026-03-12",
+    dateDisplay: "Mar 12, 2026",
+    tags: ["mcp", "ai", "claude", "cursor", "productivity", "web3-tooling"],
+    excerpt: "Six MCP servers, four skills, two subagents. A real Tuesday walked through, including the parts where the tooling doesn't work and what the genuine productivity multiplier looks like for a senior Web3 dev.",
+    file: "/blogs/2026-03-12-how-mcps-actually-changed-my-week.md"
+  },
+  {
+    slug: "2025-09-22-i-rewrote-my-dapp-frontend-from-ethers-to-viem",
+    title: "I Rewrote My dApp Frontend from Ethers to Viem. Here's What I Actually Learned.",
+    date: "2025-09-22",
+    dateDisplay: "Sep 22, 2025",
+    tags: ["viem", "ethers", "wagmi", "frontend", "typescript", "refactor"],
+    excerpt: "Three weekends, -800 lines, -70 kB gzipped, two latent bugs found. The ethers-to-viem migration that everyone has been telling me to do — what was annoying, what wasn't, and what actually changed.",
+    file: "/blogs/2025-09-22-i-rewrote-my-dapp-frontend-from-ethers-to-viem.md"
+  },
+  {
     slug: "2025-04-01-what-account-abstraction-actually-changes-for-developers",
     title: "What Account Abstraction Actually Changes for Developers (Not the Hype Version)",
     date: "2025-04-01",
@@ -702,6 +720,86 @@ const TRACKS = [
       { title: "Starknet Appchains: Deploy a STARK-Proven Chain with Cairo", file: "/appchain-frameworks/track-01-appchain-frameworks/04-starknet-appchains.md" },
       { title: "Saga Chainlets: Launch a Dedicated Chain in Minutes", file: "/appchain-frameworks/track-01-appchain-frameworks/05-saga-chainlets.md" },
       { title: "Avalanche Subnets: Sub-Second Finality with Custom VMs", file: "/appchain-frameworks/track-01-appchain-frameworks/06-avalanche-subnets.md" }
+    ]
+  },
+  {
+    id: "frontend-engineering",
+    number: "Track 40",
+    title: "Web3 Frontend Engineering",
+    level: "Intermediate",
+    desc: "viem, wagmi, Next.js App Router, multicall, transaction UX, IPFS, and real-time data — building dApp frontends that don't fall over.",
+    posts: [
+      { title: "Ethers vs Viem vs Web3.js: Picking a Library in 2026", file: "/frontend-ux/track-02-web3-frontend-engineering/01-ethers-vs-viem-vs-web3js.md" },
+      { title: "wagmi v2 + Viem: Hooks, Connectors, and Type Safety", file: "/frontend-ux/track-02-web3-frontend-engineering/02-wagmi-v2-viem-hooks.md" },
+      { title: "Next.js App Router for dApps: SSR, RSC, and Wallet State Hydration", file: "/frontend-ux/track-02-web3-frontend-engineering/03-nextjs-app-router-dapps.md" },
+      { title: "Reading Contract State: Multicall, Caching, and Subscriptions", file: "/frontend-ux/track-02-web3-frontend-engineering/04-multicall-caching-subscriptions.md" },
+      { title: "Sending Transactions: UX Patterns for Pending, Mined, and Reverted States", file: "/frontend-ux/track-02-web3-frontend-engineering/05-transaction-ux-patterns.md" },
+      { title: "IPFS for dApps: Pinning, Gateways, and Reliable NFT Metadata", file: "/frontend-ux/track-02-web3-frontend-engineering/06-ipfs-for-dapps.md" },
+      { title: "Real-Time Data: WebSocket Subscriptions and Optimistic UI", file: "/frontend-ux/track-02-web3-frontend-engineering/07-realtime-websockets-optimistic-ui.md" }
+    ]
+  },
+  {
+    id: "account-abstraction",
+    number: "Track 41",
+    title: "Account Abstraction & Smart Wallets",
+    level: "Intermediate → Advanced",
+    desc: "ERC-4337 internals, paymasters, session keys, SIWE, passkeys, and EIP-7702 — the auth and tx layer that's quietly replacing EOAs.",
+    posts: [
+      { title: "ERC-4337 Architecture: UserOps, Bundlers, EntryPoint, Paymasters", file: "/frontend-ux/track-03-account-abstraction/01-erc4337-architecture.md" },
+      { title: "Building a Smart Account from Scratch with Solidity", file: "/frontend-ux/track-03-account-abstraction/02-building-smart-account-solidity.md" },
+      { title: "Paymaster Design: Sponsored Gas, ERC-20 Gas, and Rate Limiting", file: "/frontend-ux/track-03-account-abstraction/03-paymaster-design.md" },
+      { title: "Session Keys and Permission Systems for dApps and Games", file: "/frontend-ux/track-03-account-abstraction/04-session-keys-permissions.md" },
+      { title: "Sign-In With Ethereum (SIWE): Sessions, Nonces, and JWT Bridging", file: "/frontend-ux/track-03-account-abstraction/05-sign-in-with-ethereum.md" },
+      { title: "Passkeys + WebAuthn for Smart Wallets", file: "/frontend-ux/track-03-account-abstraction/06-passkeys-webauthn-smart-wallets.md" },
+      { title: "EIP-7702: Setting Code on EOAs", file: "/frontend-ux/track-03-account-abstraction/07-eip-7702-setting-code-on-eoas.md" }
+    ]
+  },
+  {
+    id: "ai-developer-tooling",
+    number: "Track 42",
+    title: "AI Developer Tooling: MCP, Skills & Subagents",
+    level: "Intermediate",
+    desc: "MCP servers, Claude Skills, custom subagents, and the agent toolchain — practical AI tooling for Web3 engineers in 2026.",
+    posts: [
+      { title: "MCP Explained: The Protocol Connecting AI to Your Tools", file: "/tooling-infra/track-03-ai-developer-tooling/01-mcp-protocol-explained.md" },
+      { title: "Setting Up MCP Servers: Filesystem, Git, Databases, and the Standard Library", file: "/tooling-infra/track-03-ai-developer-tooling/02-setting-up-mcp-servers.md" },
+      { title: "Web3-Specific MCP Servers: Etherscan, Alchemy, Foundry, and On-Chain Data", file: "/tooling-infra/track-03-ai-developer-tooling/03-web3-mcp-servers.md" },
+      { title: "Building Your Own MCP Server", file: "/tooling-infra/track-03-ai-developer-tooling/04-building-your-own-mcp-server.md" },
+      { title: "Claude Skills and Agent Skills: Packaging Reusable Capabilities", file: "/tooling-infra/track-03-ai-developer-tooling/05-claude-skills-and-agent-skills.md" },
+      { title: "Subagents and Custom Agents: Delegating Specialized Work", file: "/tooling-infra/track-03-ai-developer-tooling/06-subagents-custom-agents.md" },
+      { title: "AI-Augmented Web3 Workflows: Audits, Indexing, and Debugging", file: "/tooling-infra/track-03-ai-developer-tooling/07-ai-augmented-web3-workflows.md" }
+    ]
+  },
+  {
+    id: "nft-engineering",
+    number: "Track 43",
+    title: "NFT Engineering Beyond ERC-721",
+    level: "Intermediate",
+    desc: "Metadata standards, marketplaces, royalty enforcement, lazy minting, rentable NFTs, soulbound tokens, and on-chain art — the full stack of NFT primitives.",
+    posts: [
+      { title: "NFT Metadata Standards: Schema, IPFS, and Frozen URIs", file: "/defi/track-03-nft-engineering/01-nft-metadata-standards.md" },
+      { title: "Building an NFT Marketplace: Listings, Bids, and Settlement", file: "/defi/track-03-nft-engineering/02-building-nft-marketplace.md" },
+      { title: "EIP-2981 vs Royalty Registries: Enforcing Creator Royalties", file: "/defi/track-03-nft-engineering/03-eip-2981-royalty-enforcement.md" },
+      { title: "Lazy Minting: Off-Chain Signatures, On-Chain Settlement", file: "/defi/track-03-nft-engineering/04-lazy-minting.md" },
+      { title: "ERC-4907 Rentable NFTs and Other Useful Extensions", file: "/defi/track-03-nft-engineering/05-erc4907-rentable-nfts.md" },
+      { title: "Soulbound Tokens and ERC-5192 Non-Transferable NFTs", file: "/defi/track-03-nft-engineering/06-soulbound-tokens.md" },
+      { title: "Generative NFT Art: On-Chain SVGs and Reveal Mechanics", file: "/defi/track-03-nft-engineering/07-generative-onchain-svg.md" }
+    ]
+  },
+  {
+    id: "subgraph-development",
+    number: "Track 44",
+    title: "The Graph & Subgraph Development",
+    level: "Intermediate",
+    desc: "Manifest, schema, mappings, dynamic data sources, performance, decentralized network — building production indexers with The Graph.",
+    posts: [
+      { title: "Subgraph Anatomy: Manifest, Schema, and Mappings", file: "/tooling-infra/track-02-subgraph-development/01-subgraph-anatomy.md" },
+      { title: "Writing Mappings in AssemblyScript: Event Handlers and Entities", file: "/tooling-infra/track-02-subgraph-development/02-writing-mappings-assemblyscript.md" },
+      { title: "Modeling Time-Series and Cumulative Data in Subgraphs", file: "/tooling-infra/track-02-subgraph-development/03-time-series-cumulative-data.md" },
+      { title: "Indexing Factory Patterns: Dynamic Data Sources", file: "/tooling-infra/track-02-subgraph-development/04-factory-patterns-dynamic-data-sources.md" },
+      { title: "Subgraph Performance: Query Cost, Pagination, and Indexing Speed", file: "/tooling-infra/track-02-subgraph-development/05-subgraph-performance.md" },
+      { title: "Hosted Service vs Decentralized Network: Cost and Tradeoffs", file: "/tooling-infra/track-02-subgraph-development/06-hosted-service-vs-decentralized-network.md" },
+      { title: "Migrating from a Subgraph to a Custom Indexer", file: "/tooling-infra/track-02-subgraph-development/07-migrating-to-custom-indexer.md" }
     ]
   }
 ];
