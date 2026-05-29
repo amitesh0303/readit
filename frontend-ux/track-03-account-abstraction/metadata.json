@@ -1,0 +1,10 @@
+{
+  "id": "account-abstraction",
+  "category": "frontend-ux",
+  "title": "Account Abstraction & Smart Wallets",
+  "slug": "account-abstraction",
+  "level": "Intermediate → Advanced",
+  "description": "ERC-4337 internals, paymasters, session keys, SIWE, passkeys, and EIP-7702 — the auth and tx layer that's quietly replacing EOAs.",
+  "lessons": 7,
+  "lastVerified": "2026-05-15"
+}

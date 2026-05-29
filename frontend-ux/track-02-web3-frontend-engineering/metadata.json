@@ -1,0 +1,10 @@
+{
+  "id": "frontend-engineering",
+  "category": "frontend-ux",
+  "title": "Web3 Frontend Engineering",
+  "slug": "web3-frontend-engineering",
+  "level": "Intermediate",
+  "description": "viem, wagmi, Next.js App Router, multicall, transaction UX, IPFS, and real-time data — building dApp frontends that don't fall over.",
+  "lessons": 7,
+  "lastVerified": "2026-05-15"
+}

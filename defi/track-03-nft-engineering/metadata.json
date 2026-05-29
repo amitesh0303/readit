@@ -1,0 +1,10 @@
+{
+  "id": "nft-engineering",
+  "category": "defi",
+  "title": "NFT Engineering Beyond ERC-721",
+  "slug": "nft-engineering",
+  "level": "Intermediate",
+  "description": "Metadata standards, marketplaces, royalty enforcement, lazy minting, rentable NFTs, soulbound tokens, and on-chain art — the full stack of NFT primitives.",
+  "lessons": 7,
+  "lastVerified": "2026-05-15"
+}
