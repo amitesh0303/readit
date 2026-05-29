@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "readit",
-  "compatibility_date": "2026-05-28",
+  "compatibility_date": "2026-05-29",
   "observability": {
     "enabled": true
   },
